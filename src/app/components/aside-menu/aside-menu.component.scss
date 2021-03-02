@@ -1,0 +1,16 @@
+@import "../../../styles.scss";
+
+.nav {
+	height: 90vh;
+	background-color: $second-bg-color;
+	padding-top: 2em;
+	.nav-link {
+		width: 80%;
+		color: $main-font-color;
+		margin: 1em auto;
+	}
+	.active {
+		background-color: $light-accent-color !important;
+		color: $second-font-color !important;
+	}
+}
