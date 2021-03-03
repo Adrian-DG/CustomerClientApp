@@ -1,0 +1,11 @@
+.address-list {
+	width: 80%;
+	margin: 2em auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.header {
+		width: 100%;
+	}
+}

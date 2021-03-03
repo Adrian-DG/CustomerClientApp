@@ -1,1 +1,44 @@
-<p>addresses works!</p>
+<div class="address-list">
+	<div class="header">
+		<div class="row">
+			<div class="col-md-2">
+				<a class="btn btn-light" (click)="goBack()">back to list</a>
+			</div>
+			<div class="col-md-10">
+				<h4 class="text-center">My Addresses</h4>
+			</div>
+		</div>
+		<hr />
+	</div>
+	<table class="table table-bordered table-hover">
+		<thead class="thead-light">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Street</th>
+				<th scope="col">#house</th>
+				<th scope="col">Zip Code</th>
+				<th scope="col">City</th>
+				<th scope="col">CustomerID</th>
+				<th scope="col"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let address of addresses; index as i">
+				<td>{{ i + 1 }}</td>
+				<td>{{ address.streetName }}</td>
+				<td>{{ address.houseNumber }}</td>
+				<td>{{ address.zipCode }}</td>
+				<td>{{ address.city }}</td>
+				<td>{{ address.getCustomer }}</td>
+				<td>
+					<button
+						class="btn btn-danger"
+						(click)="DeleteAddress(address.id)"
+					>
+						delete
+					</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

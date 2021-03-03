@@ -14,6 +14,10 @@ export class AddressService {
 
 	constructor(private $http: HttpClient) {}
 
+	getCustomerAddress(id: string): Observable<IAddress[]> {
+		return this.$http.get<IAddress[]>(`${this.addressUrl}/${id}`);
+	}
+
 	getAllAddress(): Observable<IAddress[]> {
 		return this.$http.get<IAddress[]>(this.addressUrl);
 	}
@@ -26,5 +30,11 @@ export class AddressService {
 					console.log(`Address ${data.ID} was added`)
 				)
 		);
+	}
+
+	deleteAddress(id: string): void {
+		this.$http
+			.delete(`${this.addressUrl}/${id}`)
+			.subscribe(() => console.log("Address deleted successfully"));
 	}
 }
