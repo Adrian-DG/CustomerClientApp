@@ -2,7 +2,7 @@
 
 This is an angular based client that consumes a .NET Core API
 
-<img src="./src/assets/form.png"/>
+<img src="src\assets\form.PNG"/>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
