@@ -12,6 +12,7 @@ import { HomeComponent } from "./pages/home/home.component";
 import { AsideMenuContentComponent } from "./components/aside-menu-content/aside-menu-content.component";
 import { CustomerFormComponent } from "./components/customer-form/customer-form.component";
 import { CustomerListComponent } from "./components/customer-list/customer-list.component";
+import { AddressesComponent } from './pages/addresses/addresses.component';
 
 @NgModule({
 	declarations: [
@@ -22,6 +23,7 @@ import { CustomerListComponent } from "./components/customer-list/customer-list.
 		AsideMenuContentComponent,
 		CustomerFormComponent,
 		CustomerListComponent,
+		AddressesComponent,
 	],
 	imports: [
 		BrowserModule,

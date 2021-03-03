@@ -2,6 +2,14 @@
 
 .formulary {
 	width: 80%;
+	margin: 2em auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.title {
+		width: 100%;
+	}
 	.form-row {
 		margin: 1em auto;
 	}

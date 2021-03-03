@@ -1,9 +1,36 @@
 <div class="list">
-	<ul>
-		<!--
-		<li *ngFor="let customer of customersList">
-			{{ customer | json }}
-		</li>
-	-->
-	</ul>
+	<div class="title">
+		<h4 class="text-center">Customers list</h4>
+		<hr />
+	</div>
+	<table class="table table-hover table-bordered">
+		<thead class="thead-light">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Firstname</th>
+				<th scope="col">Lastname</th>
+				<th scope="col">Bithday</th>
+				<th scope="col">Sex</th>
+				<th scope="col">Phone</th>
+				<th scope="col">Email</th>
+				<th scope="col"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let customer of customers; index as i">
+				<td>{{ i + 1 }}</td>
+				<td>{{ customer.firstname }}</td>
+				<td>{{ customer.lastname }}</td>
+				<td>{{ customer.birthday | date: "shortDate" }}</td>
+				<td>{{ customer.sex }}</td>
+				<td>{{ customer.phoneNumber }}</td>
+				<td>{{ customer.emailAddress }}</td>
+				<td>
+					<a class="btn btn-info" (click)="showAddresses(customer.id)"
+						>view addresses</a
+					>
+				</td>
+			</tr>
+		</tbody>
+	</table>
 </div>

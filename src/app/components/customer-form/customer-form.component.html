@@ -1,6 +1,8 @@
 <div class="formulary">
-	<h2 class="text-center">Customer's Form</h2>
-	<hr />
+	<div class="title">
+		<h2 class="text-center">Customer's Form</h2>
+		<hr />
+	</div>
 	<form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
 		<div class="form-row">
 			<div class="col-md-6">
@@ -30,8 +32,8 @@
 			</div>
 			<div class="col-md-6">
 				<select formControlName="Sex" class="form-control">
-					<option value="0">male</option>
-					<option value="1">female</option>
+					<option value="male">male</option>
+					<option value="female">female</option>
 				</select>
 			</div>
 		</div>

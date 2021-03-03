@@ -1,8 +1,8 @@
 export interface IAddress {
-	ID?: number;
+	ID: string;
 	StreetName: string;
 	HouseNumber: number;
 	ZipCode: number;
 	City: string;
-	GetCustomer: number;
+	GetCustomer: string;
 }
